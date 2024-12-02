@@ -47,4 +47,4 @@ dev = [
 ]
 
 [tool.black]
-line-length = 79  # Correction du commentaire
+line-length = 79  # Assurez-vous qu'il n'y a pas de commentaire après la valeur
