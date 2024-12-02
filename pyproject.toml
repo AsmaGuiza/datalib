@@ -15,8 +15,8 @@ packages = {find = {where = ["src"]}}
 name = "datalib"
 version = "0.1.0"
 description = "A simple data manipulation and analysis library"
-long_description = file: README.md
-long_description_content_type = text/markdown
+long_description = "file: README.md"
+long_description_content_type = "text/markdown"
 author = "Asma Guiza"
 author_email = "asma.guiza@ieee.org"
 url = "https://github.com/AsmaGuiza/datalib.git"
@@ -47,4 +47,4 @@ dev = [
 ]
 
 [tool.black]
-line-length = 79
+line-length = 79  # Correction du commentaire
