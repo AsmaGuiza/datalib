@@ -28,7 +28,8 @@ jobs:
         
     - name: Run tests
       run: |
-        pytest --maxfail=1 --disable-warnings -q --tb=short --PYTHONPATH=src
+        export PYTHONPATH=src
+        pytest --maxfail=1 --disable-warnings -q --tb=short
         
     - name: Upload coverage to Codecov (optional)
       uses: codecov/codecov-action@v2
