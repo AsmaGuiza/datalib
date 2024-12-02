@@ -28,7 +28,7 @@ jobs:
         
     - name: Run tests
       run: |
-        export PYTHONPATH=src
+        export PYTHONPATH=$(pwd)/src
         pytest --maxfail=1 --disable-warnings -q --tb=short
         
     - name: Upload coverage to Codecov (optional)
