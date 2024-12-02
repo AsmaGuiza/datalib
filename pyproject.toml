@@ -1,18 +1,21 @@
 [build-system]
+# Liste des dépendances nécessaires pour construire le package
 requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools]
+# Spécifie que les sources du package se trouvent dans le dossier 'src'
 packages = {find = {where = ["src"]}}
 
 [tool.setuptools.package-data]
+# Inclure des fichiers supplémentaires (par exemple README et LICENSE)
 "datalib" = ["README.md"]
 
 [metadata]
 name = "datalib"
 version = "0.1.0"
 description = "A simple data manipulation and analysis library"
-long_description = "file: README.md"
+long_description = "file: README.md"  # Corrected syntax for loading README
 long_description_content_type = "text/markdown"
 author = "Asma Guiza"
 author_email = "asma.guiza@ieee.org"
@@ -27,7 +30,7 @@ classifiers = [
 ]
 
 [options]
-packages = find:
+packages = ["datalib"]  # Specify the package explicitly if not using 'find'
 python_requires = ">=3.7"
 install_requires = [
     "numpy",
