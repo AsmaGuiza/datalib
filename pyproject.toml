@@ -1,14 +1,11 @@
 [build-system]
-# Liste des dépendances nécessaires pour construire le package
 requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools]
-# Spécifie que les sources du package se trouvent dans le dossier 'src'
 packages = {find = {where = ["src"]}}
 
 [tool.setuptools.package-data]
-# Inclure des fichiers supplémentaires (par exemple README et LICENSE)
 "datalib" = ["README.md"]
 
 [metadata]
@@ -26,7 +23,7 @@ classifiers = [
     "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
     "License :: OSI Approved :: MIT License",
-    "Operating System :: OS Independent",
+    "Operating System :: OS Independent"
 ]
 
 [options]
@@ -47,4 +44,4 @@ dev = [
 ]
 
 [tool.black]
-line-length = 79  # Assurez-vous qu'il n'y a pas de commentaire après la valeur
+line-length = 79
