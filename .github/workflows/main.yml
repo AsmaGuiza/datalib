@@ -26,13 +26,9 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
         
-    - name: Set PYTHONPATH to include src directory
-      run: |
-        echo "PYTHONPATH=$(pwd)/src" >> $GITHUB_ENV
-        
     - name: Run tests
       run: |
-        pytest --maxfail=1 --disable-warnings -q
+        pytest --maxfail=1 --disable-warnings -q --tb=short --PYTHONPATH=src
         
     - name: Upload coverage to Codecov (optional)
       uses: codecov/codecov-action@v2
